@@ -127,25 +127,25 @@ footer {
 }
 
 .card__messi {
-  background-image: url(/imagenes/MessiFestejoEscalado.jpg);
+  background-image: url("../imagenes/MessiFestejoEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
 .card__jordan {
-  background-image: url(/imagenes/JordanEscalado.jpg);
+  background-image: url("../imagenes/JordanEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
 .card__natacion {
-  background-image: url(/imagenes/natacionEscalado.jpg);
+  background-image: url("../imagenes/natacionEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
 .card__corredor {
-  background-image: url(/imagenes/boltEscalado.jpg);
+  background-image: url("../imagenes/boltEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;

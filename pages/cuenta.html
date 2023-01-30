@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuenta</title>
+    <!-- Enlace al icono de la ventana -->
+    <link rel="icon" href="../imagenes/zapato.ico" />
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/1e44a567fe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"
+              ><img src="../imagenes/logo.svg" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html"
+                    >Hombre</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html">Mujer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html">Niños</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/nosotros.html"
+                    >Nosotros</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="carritoCompras.html" class="nav-link"
+                    ><img
+                      src="../imagenes/-shopping-cart_90604.svg"
+                      alt="shopping-cart"
+                  /></a>
+                </li>
+                <li class="nav-item">
+                  <a href="cuenta.html" class="nav-link"
+                    ><img src="../imagenes/profile-ico.svg" alt="profile-ico"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="title">
+        <h1 class="center display2-alternative">Cuenta</h1>
+      </div>
+      <div class="form-flex">
+        <form action="" class="form">
+          <div class="form__title center">
+            <p>Inicio de Sesión</p>
+          </div>
+          <div class="form__body">
+            <label for="nombre-usuario">Nombre de Usuario </label>
+            <br />
+            <input type="text" id="nombre-usuario" />
+            <br />
+            <label for="contraseña-usuario">Contraseña </label>
+            <br />
+            <input type="password" id="contraseña-usuario" />
+            <br />
+
+            <label for="mantener-sesion">
+              <input type="checkbox" id="mantener-sesion" />Mantener sesión
+              activa
+            </label>
+            <br />
+            <button type="submit" class="button">Iniciar Sesión</button>
+            <br />
+            <button type="submit" class="button button-forgot">
+              ¿Olvido su contraseña?
+            </button>
+          </div>
+        </form>
+
+        <form action="" class="form">
+          <div class="form__title center">
+            <p>Registro</p>
+          </div>
+          <div class="form__body">
+            <label for="nombre">Nombre</label>
+            <br />
+            <input type="text" id="nombre" />
+            <br />
+            <label for="apellido">Apellido </label>
+            <br />
+            <input type="text" id="apellido" />
+            <br />
+            <label for="correo">Correo Electrónico </label>
+            <br />
+            <input type="email" id="correo" />
+            <br />
+            <label for="nueva-contraseña">Contraseña </label>
+            <br />
+            <input type="password" id="nueva-contraseña" />
+            <br />
+            <label for="confirmar-contraseña">Confirmar Contraseña </label>
+            <br />
+            <input type="password" id="confirmar-contraseña" />
+            <br />
+            <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+            <br />
+            <input type="date" id="fecha-nacimiento" />
+            <br />
+            <button type="submit" class="button">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <br />
+    <br />
+    <footer class="m10-top">
+      <div class="footer-sm">
+        <div class="container">
+          <p>Seguinos en redes</p>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="container">
+        &copy;Copyright 2021 SportBell | Creada por Nicolas Mamani
+      </div>
+    </footer>
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

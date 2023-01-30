@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de compras</title>
+    <!-- Enlace al icono de la ventana -->
+    <link rel="icon" href="../imagenes/zapato.ico" />
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/1e44a567fe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"
+              ><img src="../imagenes/logo.svg" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html"
+                    >Hombre</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html">Mujer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/hombre.html">Niños</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/pages/nosotros.html"
+                    >Nosotros</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="carritoCompras.html" class="nav-link"
+                    ><img
+                      src="../imagenes/-shopping-cart_90604.svg"
+                      alt="shopping-cart"
+                  /></a>
+                </li>
+                <li class="nav-item">
+                  <a href="cuenta.html" class="nav-link"
+                    ><img src="../imagenes/profile-ico.svg" alt="profile-ico"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="container p-1">
+        <div class="title">
+          <h1 class="center display2-alternative">Carrito de Compras</h1>
+        </div>
+        <div class="row container">
+          <div class="col-sm-8 col-md-6 col-lg-8">
+            <!-- Zapatilla Hombre -->
+            <div class="row border border-2 border-dark rounded p-3">
+              <div class="col-sm-12 col-md-4">
+                <img
+                  src="../imagenes/ZapatillasPuma1SinFondo.png"
+                  alt="zapatillas-puma"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-sm-12 col-md-8">
+                <p>Zapatillas Puma Future Rider De Hombre</p>
+                <a href="">Eliminar</a>
+                <p>$29999.00</p>
+              </div>
+            </div>
+            <!-- Botines Neymar -->
+            <div class="row border border-2 border-dark mt-2 rounded p-3">
+              <div class="col-sm-12 col-md-4">
+                <img
+                  src="../imagenes/BotinesNeySinFondo.png"
+                  alt="botines-Neymar"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-sm-8 col-md-8">
+                <p>Botines FUTURE Z 3.4 Neymar Jr FG/AG ADP</p>
+                <a href="">Eliminar</a>
+                <p>$25199.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-6 col-lg-4 mt-2">
+            <!-- Tabla de descuentos -->
+            <div
+              class="centrado mt-5 border border-dark overflow-hidden rounded"
+            >
+              <div class="row tabla__title">
+                <div class="col-12">Descuento</div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-6">Ingrese su cupón</div>
+                <div class="col-6"><input type="number" /></div>
+              </div>
+              <div class="center">
+                <button class="button mt-2">Aplicar</button>
+              </div>
+            </div>
+            <!-- Tabla de total del carrito -->
+            <div
+              class="centrado mt-5 border border-dark overflow-hidden rounded"
+            >
+              <div class="row tabla__title">
+                <div class="col-12">Total del carrito</div>
+              </div>
+              <div class="row">
+                <div class="col-6">Subtotal</div>
+                <div class="col-6">$55198.00</div>
+              </div>
+              <div class="row">
+                <div class="col-6">Descuento</div>
+                <div class="col-6">$0</div>
+              </div>
+              <div class="row">
+                <div class="col-6">Total</div>
+                <div class="col-6">$55198.00</div>
+              </div>
+              <!-- Botón para continuar compra -->
+              <div class="text-center">
+                <button class="button">Continuar Compra</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <!-- <div class="container">
+          <div class="table-row m10-top">
+            <div class="table__image">
+              <img src="../imagenes/ZapatillasPuma1SinFondo.png" alt="" />
+            </div>
+            <div class="table__description">
+              <div class="table__description--text">
+                Zapatillas Puma Future Rider De Hombre
+                <br />
+                <a href="">Eliminar</a>
+              </div>
+
+              <div class="table__description--price">$29999.00</div>
+            </div>
+          </div>
+          <div class="table-row">
+            <div class="table__image">
+              <img src="../imagenes/BotinesNeySinFondo.png" alt="" />
+            </div>
+            <div class="table__description">
+              <div class="table__description--text">
+                Botines FUTURE Z 3.4 Neymar Jr FG/AG ADP
+                <br />
+                <a href="">Eliminar</a>
+              </div>
+
+              <div class="table__description--price">$25199.00</div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <section>
+        <!-- <div class="container m10-top">
+          <div class="two-tables">
+            <div class="mini-table">
+              <p class="mini-table__title">Cupón</p>
+              <div class="flex">
+                <p>Ingrese su cupón</p>
+                <input type="text" class="mini-table__input" />
+              </div>
+              <div class="center">
+                <button class="button">Aplicar cupón</button>
+              </div>
+            </div>
+            <div class="cart-total">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="cart-total__cell">Total del carrito</th>
+                    <th class="cart-total__cell"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cart-total__cell">Subtotal</td>
+                    <td class="cart-total__cell">$55198.00</td>
+                  </tr>
+                  <tr>
+                    <td class="cart-total__cell">Descuento</td>
+                    <td class="cart-total__cell">$0</td>
+                  </tr>
+                  <tr>
+                    <td class="cart-total__cell">Total</td>
+                    <td class="cart-total__cell">$55198.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="center">
+            <button class="button">Pagar</button>
+          </div>
+        </div> -->
+      </section>
+    </main>
+    <footer class="m10-top">
+      <div class="footer-sm">
+        <div class="container">
+          <p>Seguinos en redes</p>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="container">
+        &copy;Copyright 2021 SportBell | Creada por Nicolas Mamani
+      </div>
+    </footer>
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

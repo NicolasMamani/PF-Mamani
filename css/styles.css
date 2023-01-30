@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  position: relative;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .nav__list {
+  display: none;
+} */
+/* .nav__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  visibility: hidden;
+ 
+}
+.nav__item {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+} */
+
+#introSection {
+  background: linear-gradient(rgb(58, 39, 224), #2b86c5);
+}
+
+.display2 {
+  text-transform: capitalize;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.display2__intro {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.display2-alternative {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.display2__title {
+  text-align: center;
+}
+.display2__description {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+header {
+  background: linear-gradient(to right, rgb(58, 39, 224), #2b86c5);
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+}
+.title {
+  padding-top: 5rem;
+}
+
+.download {
+  text-align: center;
+}
+.download-logo {
+  text-align: center;
+}
+.gallery-presentation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 50px;
+}
+footer {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-sm {
+  background-color: #212121;
+  color: white;
+}
+.card-flex {
+  margin: 2rem;
+  width: 85%;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+}
+.card {
+  margin: 2rem;
+  width: 80%;
+  max-height: 100px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  border-radius: 15px;
+  color: black;
+}
+
+.card__messi {
+  background-image: url(/imagenes/MessiFestejoEscalado.jpg);
+  background-size: cover;
+  min-height: 246px;
+  min-width: 100px;
+}
+.card__jordan {
+  background-image: url(/imagenes/JordanEscalado.jpg);
+  background-size: cover;
+  min-height: 246px;
+  min-width: 100px;
+}
+.card__natacion {
+  background-image: url(/imagenes/natacionEscalado.jpg);
+  background-size: cover;
+  min-height: 246px;
+  min-width: 100px;
+}
+.card__corredor {
+  background-image: url(/imagenes/boltEscalado.jpg);
+  background-size: cover;
+  min-height: 246px;
+  min-width: 100px;
+}
+
+.card__image {
+  height: 200px;
+}
+
+.gallery-presentation img,
+.gallery-sale img {
+  max-width: 300px;
+}
+
+.gallery-sale {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 100px;
+}
+/* Acá modifico el archivo cuenta.html */
+
+.form {
+  margin: 3rem auto;
+  width: 90%;
+  min-width: 14rem;
+  border: 1px solid black;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px black;
+}
+
+input {
+  width: 85%;
+  border-radius: 4px;
+  font-family: "calibri";
+  font-size: 16px;
+  padding: 2px;
+}
+label input {
+  width: 20px;
+}
+
+.button {
+  width: 85%;
+  margin-top: 2%;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+
+  color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+.button-forgot {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+.form__title {
+  background-color: rgb(58, 39, 224);
+  color: white;
+  font-size: 24px;
+}
+.form__body {
+  padding-left: 5%;
+}
+
+/* Usando transformación para el botón */
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom left;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+.button:hover {
+  transform: scale(1.2);
+  color: black;
+}
+.button:hover::before {
+  transform: rotate(0deg);
+}
+.button-forgot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+  background-color: black;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+.button-forgot:hover {
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    margin: 3rem auto;
+    width: 35%;
+    min-width: 14rem;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+  }
+  .form-flex {
+    display: flex;
+  }
+}
+
+/* Acá modifico el archivo nosotros.html */
+.m10-top {
+  margin-top: 10px;
+}
+.center {
+  text-align: center;
+}
+.special-text {
+  color: rgb(58, 39, 224);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+iframe {
+  margin-bottom: 25px;
+}
+
+/* Acá modifico el archivo hombre.html */
+.card-sale {
+  padding: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  max-width: 100%;
+  height: 40%;
+  border-radius: 30px;
+  margin: 2rem;
+}
+.card-sale__image {
+  width: 200px;
+}
+
+.card__description {
+  height: 38px;
+}
+.card__price {
+  font-weight: 800;
+}
+/* Acá modifico el archivo carritoCompras.html */
+.table-row {
+  display: flex;
+  justify-content: center;
+}
+.table__image {
+  max-width: 100px;
+  min-width: 90px;
+  border: 1px solid black;
+  border-right: none;
+}
+.table__description {
+  display: grid;
+  border: 1px solid black;
+}
+.table__description--input {
+  width: 20%;
+  min-width: 40px;
+  height: 2px;
+}
+.table__description--amount {
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 20px;
+}
+.table__description--text {
+  padding-top: 20px;
+  padding-right: 5px;
+  max-width: 330px;
+}
+.table__description--price {
+  padding-top: 20px;
+  padding-right: 5px;
+  min-width: 85px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  margin-bottom: 20px;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 40px;
+}
+th {
+  background-color: rgb(58, 39, 224);
+  color: white;
+}
+.tabla__title {
+  background-color: rgb(58, 39, 224);
+  color: white;
+  padding: 10px;
+}
+td img {
+  max-width: 100px;
+}
+.trash-can {
+  max-width: 40px;
+  padding-left: 15px;
+}
+.cart-total {
+  width: 40%;
+  min-width: 300px;
+}
+
+.cart-total__cell {
+  border: 0px;
+}
+.mini-table {
+  width: 330px;
+  min-width: 330px;
+  border: 1px solid black;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  margin-bottom: 10px;
+}
+.mini-table__title {
+  background-color: rgb(58, 39, 224);
+  color: white;
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.mini-table__input {
+  width: 40%;
+  height: 5px;
+}
+.two-tables {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.centrado {
+  width: 90%;
+  margin-left: 15px;
+}
+/* Media querie para Index */
+@media (min-width: 1024px) {
+  .gallery-presentation {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .card-flex {
+    width: 20%;
+  }
+  .button {
+    width: 40%;
+  }
+  .display2 {
+    display: flex;
+    padding-top: 100px;
+  }
+  /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
+  .display2::before {
+    content: "";
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 55%;
+    opacity: 0.1;
+    box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px,
+      400px 200px, 400px 300px, 0px 0px;
+  }
+  .display2__intro {
+    font-size: 52px;
+  }
+}
+
+/* Media querie para cuenta.html */
+@media (min-width: 1024px) {
+  .form {
+    margin: 3rem auto;
+    width: 35%;
+    min-width: 14rem;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+  }
+  .form-flex {
+    display: flex;
+  }
+}
+/* Media querie para hombre.html */
+@media (min-width: 1024px) {
+  .gallery-sale {
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .card-sale {
+    max-width: 256px;
+  }
+}

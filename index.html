@@ -25,6 +25,11 @@
     />
 
     <link rel="icon" href="imagenes/zapato.ico" />
+    <!-- Animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header>
@@ -54,7 +59,7 @@
                   <a class="nav-link active" href="pages/hombre.html">Mujer</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="pages/hombre.html">Niños</a>
+                  <a class="nav-link active" href="">Niños</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="pages/nosotros.html"
@@ -82,10 +87,13 @@
     <main>
       <section id="introSection">
         <div class="container">
+          <!-- Introducción a la páginas con texto, imagen y botón de descarga -->
           <div class="display2">
             <div class="title">
               <h1>
-                <span class="display2__intro">SportBell App</span>
+                <span class="display2__intro animate__animated animate__flash"
+                  >SportBell App</span
+                >
               </h1>
               <div>
                 <span class="display2__description"
@@ -97,7 +105,11 @@
               </div>
               <button class="button">Descargar</button>
             </div>
-            <img src="imagenes/CelularSinFondo.png" alt="" />
+            <img
+              src="imagenes/CelularSinFondo.png"
+              alt="celular"
+              class="phone2"
+            />
           </div>
           <br />
         </div>
@@ -110,7 +122,7 @@
         ></path>
       </svg>
       <section>
-        <!-- Gallery sera la que contendra a las 4 Card -->
+        <!-- gallery es una galeria que contiene 4 imagenes -->
         <div class="gallery-presentation container">
           <!-- Card de fútbol -->
           <div class="card-flex">
@@ -137,6 +149,7 @@
         </div>
       </section>
     </main>
+
     <br /><br />
     <footer>
       <div class="footer-sm">

@@ -300,8 +300,8 @@ iframe {
   margin-left: 15px;
 }
 
-/* Media querie para Index */
 @media (min-width: 1024px) {
+  /* Media querie para Index */
   .gallery-presentation {
     width: 80%;
     flex-direction: row;
@@ -336,10 +336,7 @@ iframe {
   .phone2 {
     animation: to-top 0.5s ease;
   }
-}
-
-/* Media querie para cuenta.html */
-@media (min-width: 1024px) {
+  /* Media querie para cuenta.html */
   .form {
     margin: 3rem auto;
     width: 35%;
@@ -352,9 +349,7 @@ iframe {
   .form-flex {
     display: flex;
   }
-}
-/* Media querie para hombre.html */
-@media (min-width: 1024px) {
+  /* Media querie para hombre.html */
   .gallery-sale {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
@@ -363,10 +358,7 @@ iframe {
   .card-sale {
     max-width: 256px;
   }
-}
-
-/* Media querie para cuenta.html */
-@media (min-width: 1024px) {
+  /* Media querie para cuenta.html */
   .form {
     margin: 3rem auto;
     width: 35%;

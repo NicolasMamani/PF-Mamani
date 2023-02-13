@@ -1,0 +1,103 @@
+@import "index";
+@import "cuenta";
+@import "nosotros";
+@import "hombre";
+@import "carrito-compra";
+
+.display2-alternative {
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.display2__title {
+  text-align: center;
+}
+
+.card__image {
+  height: 200px;
+}
+
+.gallery-presentation img,
+.gallery-sale img {
+  max-width: 300px;
+  // Borrar el primer selector "gallery-presentation img" porque
+  // ya lo puse en el partial de index
+}
+
+.gallery-sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40%;
+}
+
+input {
+  width: 85%;
+  border-radius: 4px;
+  font-family: "calibri";
+  font-size: 16px;
+  padding: 2px;
+}
+label input {
+  width: 20px;
+}
+
+@media (min-width: 1024px) {
+  /* Media querie para Index */
+  .gallery-presentation {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .card-flex {
+    width: 20%;
+  }
+  .button {
+    width: 40%;
+  }
+  .display2 {
+    display: flex;
+    padding-top: 100px;
+  }
+  /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
+  .display2::before {
+    content: "";
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 55%;
+    opacity: 0.1;
+    box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px,
+      400px 200px, 400px 300px, 0px 0px;
+  }
+  .display2__intro {
+    font-size: 52px;
+  }
+  .phone2 {
+    animation: to-top 0.5s ease;
+  }
+  /* Media querie para cuenta.html */
+  .form {
+    margin: 3rem auto;
+    width: 35%;
+    min-width: 14rem;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+  }
+  .form-flex {
+    display: flex;
+  }
+  /* Media querie para hombre.html */
+  .gallery-sale {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 10%;
+  }
+  .card-sale {
+    max-width: 256px;
+  }
+}

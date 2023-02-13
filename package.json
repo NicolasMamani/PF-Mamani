@@ -1,0 +1,20 @@
+{
+  "name": "sportbell",
+  "version": "1.0.0",
+  "description": "# Páginas hechas totalmente con Boostrap y poco estilos propios",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasMamani/SportBell.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasMamani/SportBell/issues"
+  },
+  "homepage": "https://github.com/NicolasMamani/SportBell#readme"
+}

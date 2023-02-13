@@ -1,0 +1,16 @@
+/* Acá modifico el archivo hombre.html */
+.gallery-sale {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  /* Media querie para hombre.html */
+  .gallery-sale {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 10%;
+  }
+  .card-sale {
+    max-width: 256px;
+  }
+}

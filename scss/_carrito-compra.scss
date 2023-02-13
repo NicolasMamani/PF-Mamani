@@ -1,0 +1,25 @@
+/* Acá modifico el archivo carritoCompras.html */
+
+.cart-total {
+  width: 40%;
+  min-width: 300px;
+}
+
+.tabla__title {
+  background-color: $primary-color;
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+iframe {
+  width: 90%;
+}
+.centrado {
+  width: 90%;
+  margin-left: 15px;
+}

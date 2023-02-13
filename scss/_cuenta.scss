@@ -1,0 +1,35 @@
+@import "estilos-generales";
+/* Acá modifico el archivo cuenta.html */
+
+.form {
+  margin: 3rem auto;
+  width: 90%;
+  min-width: 14rem;
+  border: 1px solid black;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px black;
+  .form__title {
+    background-color: $primary-color;
+    color: white;
+    font-size: 24px;
+  }
+  .form__body {
+    padding-left: 5%;
+  }
+}
+@media (min-width: 1024px) {
+  /* Media querie para cuenta.html */
+  .form {
+    margin: 3rem auto;
+    width: 35%;
+    min-width: 14rem;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+  }
+  .form-flex {
+    display: flex;
+  }
+}

@@ -1,0 +1,134 @@
+@import "estilos-generales";
+// css para index.html
+
+body {
+  position: relative;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+#introSection {
+  background: $gradient-color;
+  .display2 {
+    text-transform: capitalize;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 400;
+
+    .display2__intro {
+      font-size: 42px;
+      font-weight: 500;
+    }
+    .display2__description {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+}
+
+// Probando Maps
+$deportistas: (
+  messi: "../imagenes/MessiFestejoEscalado.jpg",
+  jordan: "../imagenes/JordanEscalado.jpg",
+  nadador: "../imagenes/natacionEscalado.jpg",
+  bolt: "../imagenes/boltEscalado.jpg",
+);
+// Probando Maps
+
+section {
+  .gallery-presentation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 50px;
+    .card-flex {
+      margin: 2rem;
+      width: 85%;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+      border-radius: 15px;
+      color: white;
+      background-color: black;
+      overflow: hidden;
+
+      .card__messi {
+        background-image: url(map-get($deportistas, messi));
+        background-size: cover;
+        min-height: 246px;
+        min-width: 100px;
+      }
+      .card__jordan {
+        background-image: url(map-get($deportistas, jordan));
+        background-size: cover;
+        min-height: 246px;
+        min-width: 100px;
+      }
+      .card__natacion {
+        background-image: url(map-get($deportistas, nadador));
+        background-size: cover;
+        min-height: 246px;
+        min-width: 100px;
+      }
+      .card__corredor {
+        background-image: url(map-get($deportistas, bolt));
+        background-size: cover;
+        min-height: 246px;
+        min-width: 100px;
+      }
+    }
+    img {
+      max-width: 300px;
+    }
+  }
+
+  /* Usando animaciones */
+  @keyframes to-top {
+    from {
+      opacity: 0;
+      transform: translateY(-80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Media querie para Index */
+    .gallery-presentation {
+      width: 80%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    .card-flex {
+      width: 20%;
+    }
+    .button {
+      width: 40%;
+    }
+    .display2 {
+      display: flex;
+      padding-top: 100px;
+    }
+    /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
+    .display2::before {
+      content: "";
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      left: 55%;
+      opacity: 0.1;
+      box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px,
+        400px 200px, 400px 300px, 0px 0px;
+    }
+    .display2__intro {
+      font-size: 52px;
+    }
+    .phone2 {
+      animation: to-top 0.5s ease;
+    }
+  }
+}

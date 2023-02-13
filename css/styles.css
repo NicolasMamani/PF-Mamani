@@ -1,59 +1,14 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-}
-body {
-  position: relative;
-  padding-bottom: 3rem;
-  min-height: 100vh;
-}
-
-.nav {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  align-items: center;
-  justify-content: space-between;
-}
-
-#introSection {
-  background: linear-gradient(rgb(58, 39, 224), #2b86c5);
-}
-
-.display2 {
-  text-transform: capitalize;
-  color: white;
-  font-size: 2.3rem;
-  font-weight: 400;
-}
-.display2__intro {
-  font-size: 42px;
-  font-weight: 500;
-}
-
-.display2-alternative {
-  text-transform: capitalize;
-  font-size: 2.3rem;
-  font-weight: 400;
-}
-
-.display2__title {
-  text-align: center;
-}
-.display2__description {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 100;
 }
 
 img {
   max-width: 100%;
 }
 
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-}
 header {
   background: linear-gradient(to right, rgb(58, 39, 224), #2b86c5);
   position: fixed;
@@ -61,17 +16,7 @@ header {
   z-index: 2;
   width: 100%;
 }
-.title {
-  padding-top: 5rem;
-}
 
-.gallery-presentation {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  margin-bottom: 50px;
-}
 footer {
   background-color: black;
   color: white;
@@ -84,39 +29,391 @@ footer {
   background-color: #212121;
   color: white;
 }
-.card-flex {
+
+.button {
+  width: 85%;
+  margin-top: 2%;
+  background-color: #ff3cac;
+  background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+  color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.button-forgot {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  border: 2px solid black;
+}
+
+/* Usando transformación para el botón */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom left;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  color: black;
+}
+
+.button:hover::before {
+  transform: rotate(0deg);
+}
+
+.button-forgot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+  background-color: black;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+
+.button-forgot:hover {
+  color: white;
+}
+
+/* Colores */
+.title {
+  padding-top: 5rem;
+}
+
+body {
+  position: relative;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+#introSection {
+  background: linear-gradient(rgb(58, 39, 224), #2b86c5);
+}
+#introSection .display2 {
+  text-transform: capitalize;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+#introSection .display2 .display2__intro {
+  font-size: 42px;
+  font-weight: 500;
+}
+#introSection .display2 .display2__description {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+section {
+  /* Usando animaciones */
+}
+section .gallery-presentation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 50px;
+}
+section .gallery-presentation .card-flex {
   margin: 2rem;
   width: 85%;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
+  box-shadow: 0 10px 30px -10px rgb(0, 0, 0);
   border-radius: 15px;
   color: white;
   background-color: black;
   overflow: hidden;
 }
-
-.card__messi {
+section .gallery-presentation .card-flex .card__messi {
   background-image: url("../imagenes/MessiFestejoEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
-.card__jordan {
+section .gallery-presentation .card-flex .card__jordan {
   background-image: url("../imagenes/JordanEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
-.card__natacion {
+section .gallery-presentation .card-flex .card__natacion {
   background-image: url("../imagenes/natacionEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
 }
-.card__corredor {
+section .gallery-presentation .card-flex .card__corredor {
   background-image: url("../imagenes/boltEscalado.jpg");
   background-size: cover;
   min-height: 246px;
   min-width: 100px;
+}
+section .gallery-presentation img {
+  max-width: 300px;
+}
+@keyframes to-top {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media (min-width: 1024px) {
+  section {
+    /* Media querie para Index */
+    /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
+  }
+  section .gallery-presentation {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  section .card-flex {
+    width: 20%;
+  }
+  section .button {
+    width: 40%;
+  }
+  section .display2 {
+    display: flex;
+    padding-top: 100px;
+  }
+  section .display2::before {
+    content: "";
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 55%;
+    opacity: 0.1;
+    box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px, 400px 200px, 400px 300px, 0px 0px;
+  }
+  section .display2__intro {
+    font-size: 52px;
+  }
+  section .phone2 {
+    animation: to-top 0.5s ease;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background: linear-gradient(to right, rgb(58, 39, 224), #2b86c5);
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-sm {
+  background-color: #212121;
+  color: white;
+}
+
+.button {
+  width: 85%;
+  margin-top: 2%;
+  background-color: #ff3cac;
+  background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+  color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.button-forgot {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  border: 2px solid black;
+}
+
+/* Usando transformación para el botón */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom left;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  color: black;
+}
+
+.button:hover::before {
+  transform: rotate(0deg);
+}
+
+.button-forgot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+  background-color: black;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+
+.button-forgot:hover {
+  color: white;
+}
+
+/* Colores */
+.title {
+  padding-top: 5rem;
+}
+
+/* Acá modifico el archivo cuenta.html */
+.form {
+  margin: 3rem auto;
+  width: 90%;
+  min-width: 14rem;
+  border: 1px solid black;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px black;
+}
+.form .form__title {
+  background-color: rgb(58, 39, 224);
+  color: white;
+  font-size: 24px;
+}
+.form .form__body {
+  padding-left: 5%;
+}
+
+@media (min-width: 1024px) {
+  /* Media querie para cuenta.html */
+  .form {
+    margin: 3rem auto;
+    width: 35%;
+    min-width: 14rem;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+  }
+  .form-flex {
+    display: flex;
+  }
+}
+/* Acá modifico el archivo nosotros.html */
+.m10-top {
+  margin-top: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.special-text {
+  color: rgb(58, 39, 224);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+iframe {
+  margin-bottom: 50px;
+}
+
+/* Acá modifico el archivo hombre.html */
+.gallery-sale {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  /* Media querie para hombre.html */
+  .gallery-sale {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 10%;
+  }
+  .card-sale {
+    max-width: 256px;
+  }
+}
+/* Acá modifico el archivo carritoCompras.html */
+.cart-total {
+  width: 40%;
+  min-width: 300px;
+}
+
+.tabla__title {
+  background-color: rgb(58, 39, 224);
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+iframe {
+  width: 90%;
+}
+
+.centrado {
+  width: 90%;
+  margin-left: 15px;
+}
+
+.display2-alternative {
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.display2__title {
+  text-align: center;
 }
 
 .card__image {
@@ -134,18 +431,6 @@ footer {
   margin-bottom: 40%;
 }
 
-/* Acá modifico el archivo cuenta.html */
-
-.form {
-  margin: 3rem auto;
-  width: 90%;
-  min-width: 14rem;
-  border: 1px solid black;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 2px 4px 10px black;
-}
-
 input {
   width: 85%;
   border-radius: 4px;
@@ -153,151 +438,9 @@ input {
   font-size: 16px;
   padding: 2px;
 }
+
 label input {
   width: 20px;
-}
-
-.button {
-  width: 85%;
-  margin-top: 2%;
-  background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%
-  );
-
-  color: white;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  min-width: 120px;
-  position: relative;
-  overflow: hidden;
-  font-size: 16px;
-}
-.button-forgot {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  border: 2px solid black;
-}
-.form__title {
-  background-color: rgb(58, 39, 224);
-  color: white;
-  font-size: 24px;
-}
-.form__body {
-  padding-left: 5%;
-}
-
-/* Usando transformación para el botón */
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
-  transform-origin: bottom left;
-  height: 100%;
-  width: 100%;
-  transform: rotate(-90deg);
-  z-index: -1;
-  transition: transform 0.5s;
-}
-.button:hover {
-  transform: scale(1.2);
-  color: black;
-}
-.button:hover::before {
-  transform: rotate(0deg);
-}
-.button-forgot::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform-origin: bottom left;
-  background-color: black;
-  transform: rotate(-90deg);
-  z-index: -1;
-}
-.button-forgot:hover {
-  color: white;
-}
-
-/* Acá modifico el archivo nosotros.html */
-.m10-top {
-  margin-top: 10px;
-}
-.center {
-  text-align: center;
-}
-.special-text {
-  color: rgb(58, 39, 224);
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-iframe {
-  margin-bottom: 50px;
-}
-
-/* Acá modifico el archivo hombre.html */
-.gallery-sale {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 20px;
-}
-.card-sale {
-  padding: 1rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 45);
-  max-width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  margin: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.card-sale__image {
-  width: 100%;
-}
-
-.card__description {
-  height: 38px;
-  text-align: center;
-}
-.card__price {
-  font-weight: 800;
-}
-/* Acá modifico el archivo carritoCompras.html */
-
-.cart-total {
-  width: 40%;
-  min-width: 300px;
-}
-
-.tabla__title {
-  background-color: rgb(58, 39, 224);
-  color: white;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-iframe {
-  width: 90%;
-}
-.centrado {
-  width: 90%;
-  margin-left: 15px;
 }
 
 @media (min-width: 1024px) {
@@ -327,8 +470,7 @@ iframe {
     position: absolute;
     left: 55%;
     opacity: 0.1;
-    box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px,
-      400px 200px, 400px 300px, 0px 0px;
+    box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px, 400px 200px, 400px 300px, 0px 0px;
   }
   .display2__intro {
     font-size: 52px;
@@ -358,29 +500,6 @@ iframe {
   .card-sale {
     max-width: 256px;
   }
-  /* Media querie para cuenta.html */
-  .form {
-    margin: 3rem auto;
-    width: 35%;
-    min-width: 14rem;
-    border: 1px solid black;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 4px 10px black;
-  }
-  .form-flex {
-    display: flex;
-  }
 }
 
-/* Usando animaciones */
-@keyframes to-top {
-  from {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
+/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Definición de variables */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ img {
 }
 
 header {
-  background: linear-gradient(to right, rgb(58, 39, 224), #2b86c5);
+  background: linear-gradient(to right, #3a27e0, #2b86c5);
   position: fixed;
   top: 0px;
   z-index: 2;
@@ -89,7 +90,6 @@ footer {
   color: white;
 }
 
-/* Colores */
 .title {
   padding-top: 5rem;
 }
@@ -137,30 +137,25 @@ section .gallery-presentation .card-flex {
   color: white;
   background-color: black;
   overflow: hidden;
+  /* Aplico el extend */
 }
-section .gallery-presentation .card-flex .card__messi {
+section .gallery-presentation .card-flex .card-sport, section .gallery-presentation .card-flex .card__sport--corredor, section .gallery-presentation .card-flex .card__sport--natacion, section .gallery-presentation .card-flex .card__sport--jordan, section .gallery-presentation .card-flex .card__sport--messi {
+  background-size: cover;
+  min-height: 246px;
+  min-width: 100px;
+  cursor: pointer;
+}
+section .gallery-presentation .card-flex .card__sport--messi {
   background-image: url("../imagenes/MessiFestejoEscalado.jpg");
-  background-size: cover;
-  min-height: 246px;
-  min-width: 100px;
 }
-section .gallery-presentation .card-flex .card__jordan {
+section .gallery-presentation .card-flex .card__sport--jordan {
   background-image: url("../imagenes/JordanEscalado.jpg");
-  background-size: cover;
-  min-height: 246px;
-  min-width: 100px;
 }
-section .gallery-presentation .card-flex .card__natacion {
+section .gallery-presentation .card-flex .card__sport--natacion {
   background-image: url("../imagenes/natacionEscalado.jpg");
-  background-size: cover;
-  min-height: 246px;
-  min-width: 100px;
 }
-section .gallery-presentation .card-flex .card__corredor {
+section .gallery-presentation .card-flex .card__sport--corredor {
   background-image: url("../imagenes/boltEscalado.jpg");
-  background-size: cover;
-  min-height: 246px;
-  min-width: 100px;
 }
 section .gallery-presentation img {
   max-width: 300px;
@@ -214,6 +209,7 @@ section .gallery-presentation img {
   }
 }
 
+/* Definición de variables */
 * {
   margin: 0;
   padding: 0;
@@ -225,7 +221,7 @@ img {
 }
 
 header {
-  background: linear-gradient(to right, rgb(58, 39, 224), #2b86c5);
+  background: linear-gradient(to right, #3a27e0, #2b86c5);
   position: fixed;
   top: 0px;
   z-index: 2;
@@ -304,7 +300,6 @@ footer {
   color: white;
 }
 
-/* Colores */
 .title {
   padding-top: 5rem;
 }
@@ -320,12 +315,23 @@ footer {
   box-shadow: 2px 4px 10px black;
 }
 .form .form__title {
-  background-color: rgb(58, 39, 224);
+  background-color: #3a27e0;
   color: white;
   font-size: 24px;
 }
 .form .form__body {
   padding-left: 5%;
+}
+.form .form__body input {
+  width: 85%;
+  border-radius: 4px;
+  font-family: "calibri";
+  font-size: 16px;
+  padding: 2px;
+  visibility: inherit;
+}
+.form .form__body label input {
+  width: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -353,7 +359,7 @@ footer {
 }
 
 .special-text {
-  color: rgb(58, 39, 224);
+  color: #3a27e0;
   font-weight: 800;
   font-size: 1.2rem;
 }
@@ -367,12 +373,12 @@ iframe {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
-  margin-bottom: 25%;
+  margin-bottom: 35%;
 }
 .gallery-sale .card-sale {
   padding: 1rem;
   box-shadow: 0 10px 30px -10px rgb(0, 0, 0);
-  max-width: 100%;
+  max-width: 256px;
   height: 100%;
   border-radius: 30px;
   margin: 2rem;
@@ -383,7 +389,6 @@ iframe {
   width: 100%;
 }
 .gallery-sale .card-sale__description {
-  font-size: 18px;
   height: 38px;
   text-align: center;
 }
@@ -412,7 +417,7 @@ iframe {
 }
 
 .tabla__title {
-  background-color: rgb(58, 39, 224);
+  background-color: #3a27e0;
   color: white;
 }
 
@@ -432,35 +437,8 @@ iframe {
   margin-left: 15px;
 }
 
-.display2-alternative {
-  text-transform: capitalize;
-  font-size: 2.3rem;
-  font-weight: 400;
-}
-
-.display2__title {
-  text-align: center;
-}
-
-.card__image {
-  height: 200px;
-}
-
-.gallery-presentation img,
-.gallery-sale img {
-  max-width: 300px;
-}
-
-input {
+.input__discount {
   width: 85%;
-  border-radius: 4px;
-  font-family: "calibri";
-  font-size: 16px;
-  padding: 2px;
-}
-
-label input {
-  width: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

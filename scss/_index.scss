@@ -52,29 +52,28 @@ section {
       background-color: black;
       overflow: hidden;
 
-      .card__messi {
+      .card-sport {
+        background-size: cover;
+        min-height: 246px;
+        min-width: 100px;
+        cursor: pointer;
+      }
+      /* Aplico el extend */
+      .card__sport--messi {
+        @extend .card-sport;
         background-image: url(map-get($deportistas, messi));
-        background-size: cover;
-        min-height: 246px;
-        min-width: 100px;
       }
-      .card__jordan {
+      .card__sport--jordan {
+        @extend .card-sport;
         background-image: url(map-get($deportistas, jordan));
-        background-size: cover;
-        min-height: 246px;
-        min-width: 100px;
       }
-      .card__natacion {
+      .card__sport--natacion {
+        @extend .card-sport;
         background-image: url(map-get($deportistas, nadador));
-        background-size: cover;
-        min-height: 246px;
-        min-width: 100px;
       }
-      .card__corredor {
+      .card__sport--corredor {
+        @extend .card-sport;
         background-image: url(map-get($deportistas, bolt));
-        background-size: cover;
-        min-height: 246px;
-        min-width: 100px;
       }
     }
     img {

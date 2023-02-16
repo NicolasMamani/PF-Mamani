@@ -16,6 +16,17 @@
   }
   .form__body {
     padding-left: 5%;
+    input {
+      width: 85%;
+      border-radius: 4px;
+      font-family: "calibri";
+      font-size: 16px;
+      padding: 2px;
+      visibility: inherit;
+    }
+    label input {
+      width: 20px;
+    }
   }
 }
 @media (min-width: 1024px) {

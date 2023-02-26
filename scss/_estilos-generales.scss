@@ -33,6 +33,13 @@ header {
   top: 0px;
   z-index: 2;
   width: 100%;
+  ul {
+    li {
+      a:hover {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 footer {
@@ -84,7 +91,7 @@ footer {
   transition: transform 0.5s;
 }
 .button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: black;
 }
 .button:hover::before {

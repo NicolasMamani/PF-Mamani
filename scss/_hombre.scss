@@ -1,8 +1,12 @@
 /* Acá modifico el archivo hombre.html */
 .gallery-sale {
+  width: 100%;
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr;
+  align-items: end;
   row-gap: 20px;
+  margin-top: 10%;
   margin-bottom: 35%;
   .card-sale {
     padding: 1rem;
@@ -31,9 +35,10 @@
 @media (min-width: 1024px) {
   /* Media querie para hombre.html */
   .gallery-sale {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 50px;
     margin-bottom: 10%;
+    margin-top: 5%;
   }
   .card-sale {
     max-width: 256px;

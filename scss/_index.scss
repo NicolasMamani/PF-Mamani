@@ -15,14 +15,21 @@ body {
     font-size: 2.3rem;
     font-weight: 400;
 
-    .display2__intro {
-      font-size: 42px;
-      font-weight: 500;
+    &__title {
+      text-align: center;
+      &--big {
+        font-size: 42px;
+        font-weight: 500;
+      }
     }
-    .display2__description {
+    &__description {
       display: inline-block;
       font-size: 1rem;
       font-weight: 100;
+    }
+    &__button {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }
@@ -80,6 +87,42 @@ section {
       max-width: 300px;
     }
   }
+  .card-subscription {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    gap: 20px;
+    padding: 10% 0;
+    background-color: black;
+    justify-content: center;
+    &__primary-text {
+      font-family: "Gloock", serif;
+      font-size: 25px;
+      color: white;
+      text-align: center;
+    }
+    &__email {
+      display: flex;
+      .subscription__input {
+        font-size: 14px;
+      }
+      .subscription__button {
+        background-color: #ff3cac;
+        background-image: $primary-button-color;
+        color: white;
+        font-size: 20px;
+        border: 0px;
+        height: 30px;
+        padding: 0px 5px;
+      }
+    }
+    &__secondary-text {
+      font-family: "Gloock", serif;
+      font-size: 25px;
+      color: white;
+      opacity: 0.5;
+    }
+  }
 
   /* Usando animaciones */
   @keyframes to-top {
@@ -104,30 +147,50 @@ section {
       width: 20%;
     }
     .button {
-      width: 40%;
+      width: 70%;
     }
     .display2 {
       display: flex;
       padding-top: 100px;
+      &__intro {
+        text-align: center;
+      }
     }
     /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
     .display2::before {
       content: "";
-      height: 70px;
-      width: 70px;
+      height: 200px;
+      width: 200px;
       border-radius: 50%;
       background-color: white;
       position: absolute;
       left: 55%;
       opacity: 0.1;
-      box-shadow: 0px 100px, 0px 200px, 0px 300px, 400px 0px, 400px 100px,
-        400px 200px, 400px 300px, 0px 0px;
+      box-shadow: 100px 300px;
     }
     .display2__intro {
       font-size: 52px;
     }
-    .phone2 {
+    .display2__img {
       animation: to-top 0.5s ease;
+    }
+    //agregando card email
+    .card-subscription {
+      flex-wrap: nowrap;
+      padding: 0;
+      padding: 5% 0;
+      background-color: black;
+      justify-content: space-around;
+
+      &__email {
+        .subscription__input {
+          width: 300px;
+        }
+        .subscription__button {
+          padding: 0px 5px;
+          height: 100%;
+        }
+      }
     }
   }
 }

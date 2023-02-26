@@ -19,6 +19,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Fuente Gloock -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
     <!-- Iconos -->
     <script
       src="https://kit.fontawesome.com/1e44a567fe.js"
@@ -63,12 +70,7 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="pages/hombre.html">Hombre</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="">Mujer</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="">Niños</a>
-                </li>
+
                 <li class="nav-item">
                   <a class="nav-link active" href="pages/nosotros.html"
                     >Nosotros</a
@@ -98,8 +100,9 @@
           <!-- Introducción a la páginas con texto, imagen y botón de descarga -->
           <div class="display2">
             <div class="title">
-              <h1>
-                <span class="display2__intro animate__animated animate__flash"
+              <h1 class="display2__title">
+                <span
+                  class="display2__title--big animate__animated animate__flash"
                   >SportBell App</span
                 >
               </h1>
@@ -110,12 +113,14 @@
                   disponible para sistemas Android 8.0 en adelante.</span
                 >
               </div>
-              <button class="button">Descargar</button>
+              <div class="display2__button">
+                <button class="button">Descargar</button>
+              </div>
             </div>
             <img
               src="imagenes/CelularSinFondo.png"
               alt="celular"
-              class="phone2"
+              class="display2__img"
             />
           </div>
           <br />
@@ -152,6 +157,24 @@
           <div class="card-flex">
             <div class="card__sport--corredor"></div>
             <h2 class="center">Running</h2>
+          </div>
+        </div>
+
+        <!-- Parte donde el usuario puede suscribirse -->
+        <div class="card-subscription">
+          <div class="card-subscription__primary-text">
+            ¡Recibi las mejores promociones!
+          </div>
+          <div class="card-subscription__email">
+            <input
+              type="mail"
+              placeholder="Ingresá tu mail"
+              class="subscription__input"
+            />
+            <button class="subscription__button">suscribirse</button>
+          </div>
+          <div class="card-subscription__secondary-text">
+            ¡No te pierdas nada!
           </div>
         </div>
       </section>

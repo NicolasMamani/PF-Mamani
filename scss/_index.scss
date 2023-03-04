@@ -93,8 +93,9 @@ section {
     padding: 0 5%;
     gap: 20px;
     padding: 10% 0;
-    background-color: black;
+    background-color: $secondary-color;
     justify-content: center;
+    margin-bottom: 53px;
     &__primary-text {
       font-family: "Gloock", serif;
       font-size: 25px;
@@ -155,6 +156,9 @@ section {
       &__intro {
         text-align: center;
       }
+      &__description {
+        text-align: center;
+      }
     }
     /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
     .display2::before {
@@ -179,7 +183,7 @@ section {
       flex-wrap: nowrap;
       padding: 0;
       padding: 5% 0;
-      background-color: black;
+      background-color: $secondary-color;
       justify-content: space-around;
 
       &__email {

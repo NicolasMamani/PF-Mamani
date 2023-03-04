@@ -25,38 +25,37 @@ header ul li a:hover {
   font-size: 20px;
 }
 
-footer {
+.footer {
   background-color: black;
   color: white;
   width: 100%;
   position: absolute;
-  bottom: -500px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
 }
-footer div {
+.footer div {
   height: 150px;
   width: 300px;
 }
-footer div h3 {
+.footer div h3 {
   text-align: center;
   color: #2b86c5;
 }
-footer div ul {
+.footer div ul {
   list-style: none;
 }
-footer div ul li a {
+.footer div ul li a {
   text-decoration: none;
   color: white;
 }
-footer .footer__iconos {
+.footer .footer__iconos {
   display: flex;
   justify-content: space-evenly;
   padding: 0 5%;
 }
-footer .footer__iconos i {
+.footer .footer__iconos i {
   font-size: 3rem;
 }
 
@@ -253,14 +252,27 @@ section .card-subscription__secondary-text {
     transform: translateY(0px);
   }
 }
+
+.footer__index {
+  bottom: -449px;
+}
+
 @media (min-width: 720px) and (max-width: 1024px) {
-  section .footer__index {
-    background-color: red;
+  section .gallery-presentation {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section .gallery-presentation .card-flex {
+    width: 100%;
+  }
+  .footer__index {
+    bottom: -149px;
   }
 }
 @media (min-width: 1024px) {
+  /* Media querie para Index */
   section {
-    /* Media querie para Index */
     /* Uso el pseudoselector para crear los circulos alrededor de la imagen */
   }
   section .gallery-presentation {
@@ -315,8 +327,10 @@ section .card-subscription__secondary-text {
     padding: 0px 5px;
     height: 100%;
   }
+  .footer__index {
+    bottom: 0px;
+  }
 }
-
 /* Definición de variables */
 * {
   margin: 0;
@@ -343,38 +357,37 @@ header ul li a:hover {
   font-size: 20px;
 }
 
-footer {
+.footer {
   background-color: black;
   color: white;
   width: 100%;
   position: absolute;
-  bottom: -500px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
 }
-footer div {
+.footer div {
   height: 150px;
   width: 300px;
 }
-footer div h3 {
+.footer div h3 {
   text-align: center;
   color: #2b86c5;
 }
-footer div ul {
+.footer div ul {
   list-style: none;
 }
-footer div ul li a {
+.footer div ul li a {
   text-decoration: none;
   color: white;
 }
-footer .footer__iconos {
+.footer .footer__iconos {
   display: flex;
   justify-content: space-evenly;
   padding: 0 5%;
 }
-footer .footer__iconos i {
+.footer .footer__iconos i {
   font-size: 3rem;
 }
 
@@ -549,6 +562,11 @@ footer .footer__iconos i {
   max-width: 300px;
 }
 
+@media (min-width: 720px) and (max-width: 1024px) {
+  .footer__hombre {
+    bottom: 0px;
+  }
+}
 @media (min-width: 1024px) {
   /* Media querie para hombre.html */
   .gallery-sale {

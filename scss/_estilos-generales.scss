@@ -44,12 +44,11 @@ header {
   }
 }
 
-footer {
+.footer {
   background-color: black;
   color: white;
   width: 100%;
   position: absolute;
-  bottom: -500px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -79,6 +78,9 @@ footer {
       font-size: 3rem;
     }
   }
+}
+@mixin footer-bottom($bottom) {
+  bottom: $bottom;
 }
 
 .footer-sm {
